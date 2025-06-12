@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>บอกรักแฟน 💖</title>
+  <style>
+    body {
+      background: linear-gradient(to right, #ffe6f0, #fff5f8);
+      font-family: 'Kanit', sans-serif;
+      text-align: center;
+      color: #d63384;
+      padding: 50px;
+    }
+    h1 {
+      font-size: 2.5em;
+      margin-bottom: 20px;
+    }
+    p {
+      font-size: 1.5em;
+      opacity: 0;
+      transition: opacity 1s ease-in;
+      margin: 10px 0;
+    }
+    .heart {
+      font-size: 2em;
+      animation: pulse 1.5s infinite;
+    }
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.2); }
+      100% { transform: scale(1); }
+    }
+    .cat-sticker {
+      animation: bounce 2s infinite;
+      max-width: 150px;
+      margin-top: 30px;
+    }
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-20px); }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>ถึงนีโม่ววววว 💌</h1>
+  <div id="ข้อความ">
+    <p>รักแฟนที่สุดในสามโลกเยยยยยยยย</p>
+   
+
+  </div>
+
+  <!-- สติ๊กเกอร์แมวน่ารัก -->
+  <img src="https://media.giphy.com/media/MDJ9Ibxxv5I1e/giphy.gif" alt="แมวน่ารัก" class="cat-sticker">
+
+  <!-- เพลง "ตั้งแต่มีเธอฉันมีความสุข" -->
+  <audio autoplay loop>
+    <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mp3">
+    เพลงนี้ไม่สามารถเล่นได้บนเบราว์เซอร์ของคุณ
+  </audio>
+
+  <script>
+    const ข้อความ = document.querySelectorAll("#ข้อความ p");
+    ข้อความ.forEach((p, i) => {
+      setTimeout(() => {
+        p.style.opacity = 1;
+      }, i * 2500); // แสดงทีละข้อความทุก 2.5 วินาที
+    });
+  </script>
+</body>
+</html>
